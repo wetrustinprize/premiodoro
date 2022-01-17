@@ -20,6 +20,18 @@ class Reminder:
         self.on_complete_callbacks = []
 
     """
+    Same as tick(), but adds.
+
+    Nevers goes up the initial period
+
+    Arguments:
+        seconds (int): The seconds to add. Defaults: 1
+    """
+
+    def untick(self, seconds=0):
+        self.passed = min(self.passed+seconds, self.period)
+
+    """
     Ticks x seconds in this reminder.
 
     Arguments:
