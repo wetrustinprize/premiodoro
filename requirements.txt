@@ -1,3 +1,4 @@
 blessed
 pynput
 py-notifier
+playsound
