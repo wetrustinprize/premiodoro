@@ -19,6 +19,10 @@ class Reminder:
         # When completed callbacks
         self.on_complete_callbacks = []
 
+    @property
+    def remaining_time(self):
+        return self.period - self.passed
+
     """
     Same as tick(), but adds.
 
@@ -57,7 +61,7 @@ class Reminder:
             self.passed = 0
 
         for func in self.on_complete_callbacks:
-            func()
+            func(self.message)
 
     """
     On complete hook.
