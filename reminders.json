@@ -1,0 +1,10 @@
+[
+    {
+        "message": "Go take a walk",
+        "period": 3600
+    },
+    {
+        "message": "Look something else for 20 seconds",
+        "period": 1200
+    }
+]
