@@ -33,7 +33,7 @@ class Reminder:
     """
 
     def untick(self, seconds=0):
-        self.passed = min(self.passed+seconds, self.period)
+        self.passed = min(self.passed-seconds, self.period)
 
     """
     Ticks x seconds in this reminder.
